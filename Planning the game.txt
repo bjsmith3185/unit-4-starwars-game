@@ -1,0 +1,52 @@
+
+
+
+var enemyHP
+var userHP
+var enemyAttackPower
+var userAttackPower
+var enemyArray [] ????
+
+    ? how do i make html so i can put an index of the array into it?
+    ? how do i get an index and 'battle' by comparing hp and attackpowers?
+    ? would i use a function to select the user and the enemy?
+
+var enemyArray = [
+    name: 
+]
+
+reset function () {}
+
+
+
+
+
+Attack function
+
+    .on click to start function {
+
+    Attack the enemy
+    - HP of enemy -= attack power 
+    - $(html).text(hpBalance)
+
+    Enemy attacks
+    - HP of user -= attack power of enemy 
+    - $(html).text(hpBalance)
+
+    Increase the user attack power
+    - userAttackPower += userAttackPower =var userAttackPower
+
+    Compare statements
+    - if (userHP <= 0) { 
+         $(html).text(Game Over);
+         reset();
+    }
+    - else if (enemyHP <= 0)  {
+            selectNewEnemy()
+            
+        } 
+    }  // will end and wait for a click
+            
+
+
+             nextEnemy()

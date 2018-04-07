@@ -1,0 +1,149 @@
+
+
+
+/*
+use appendto to move a div to another locatoin
+*/
+
+* {
+    box-sizing: border-box;
+    }
+
+body {
+    
+    background-image: url("background.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    }
+
+#game-title {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 30px;
+    font-size: 28px;
+    }
+
+
+#character-images-top {
+    margin: 10px 0 0px 10px;
+    height: 170px;   
+    }
+
+
+.character {
+    height: 160px;
+    width: 160px;
+    float: left;
+    margin: 0 5px 0 5px;
+    padding: 0 20px 0 20px;
+    background-color: wheat;
+    }
+
+.img-top-words {
+    text-align: center;
+    height: 20px;
+    }
+
+#character-1 {
+    clear: both;
+    height: 120px;
+    width: 120px;
+    content: url("../images/bear.jpg");     
+    }
+
+#health-points-1 {
+    text-align: center;
+    height: 20px;
+   }
+
+#character-2 {
+   clear: both;
+    height: 120px;
+    width: 120px;
+    content: url("../images/goldie.jpg");    
+    }
+
+#health-points-2 {
+    text-align: center;
+    height: 20px;
+   }
+
+#character-3 {
+    clear: both;
+    height: 120px;
+    width: 120px;
+    content: url("../images/papabear.jpg");   
+    }
+
+#health-points-3 {
+    text-align: center;
+    height: 20px;
+   }
+
+#character-4 {
+    clear: both;
+    height: 120px;
+    width: 120px;
+    content: url("../images/humpty.jpg");
+    }
+
+#health-points-4 {
+    text-align: center;
+    height: 20px;
+   }
+
+#p-1 {
+    color: red;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    clear: both;
+    text-align: left;
+    padding: 10px 20px 10px 20px;
+    }
+
+#enemies-to-choose-from {
+    float: left;
+    margin: 5px 0 10px 20px;
+    border: 1px solid black; /* this can be removed */
+    
+    height: 150px;
+    width: 100%;
+
+    }
+
+#p-2, #p-3 {
+    color: red;
+    clear: both;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 24px;
+    margin: 5px 0 5px 20px;
+    }
+
+#attack-button {
+    margin-left: 20px;
+    }
+
+#p-4 {
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    clear: both;
+    font-size: 24px;
+    margin: 5px 0 5px 20px;
+    }
+
+#enemy-to-battle {
+    float: left;
+    margin: 5px 0 0px 20px;
+    border: 1px solid black; /* this can be removed */
+    
+    height: 150px;
+    width: 100%;
+
+    }
