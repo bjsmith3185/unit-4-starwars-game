@@ -15,16 +15,33 @@ var enemyArray = [
     name: 
 ]
 
-reset function () {}
-
-
+reset function () {
+    this moves all characer divs back to the top of the page
+    sets the stage variable to start
+    maybe alert box telling to select the first player?
+}
+-------------
     Set stages variable to control when event occur
     - stage = start (select the users character)
-    
-    
+      
     - stage = enemy (select the enemy from list, after stage start is complete)
 
     - stage = attack (begin the attack function, after stage enemy is complete)
+
+    - stage = 2ndEnemy  after first is defeated, allowing the next to be moved
+
+    - stage = 2ndEnemyAttack  let the attack function run
+
+    - stage = 3rdEnemy  after the 2nd is defeated, moves last to the location
+
+    - stage = 3rdEnemyAttack  lets the attack function run
+
+
+? how to get the data from the user's choice and the enemy to begin the attack?
+
+can i reference the "users div" to retreive the HP and attackpower data?
+can i reference the "enemy div" to retreive the HP and attackpower data?
+
 
 
 
@@ -42,7 +59,7 @@ Attack function
     - $(html).text(hpBalance)
 
     Increase the user attack power
-    - userAttackPower += userAttackPower =var userAttackPower
+    - userAttackPower += userAttackPower 
 
     Compare statements
     - if (userHP <= 0) { 
@@ -57,8 +74,7 @@ Attack function
             
 
 
-             nextEnemy()
-
+            
 
 
     

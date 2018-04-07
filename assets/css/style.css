@@ -55,7 +55,7 @@ body {
     content: url("../images/bear.jpg");     
     }
 
-#health-points-1 {
+#health-points {
     text-align: center;
     height: 20px;
    }
@@ -67,7 +67,7 @@ body {
     content: url("../images/goldie.jpg");    
     }
 
-#health-points-2 {
+#health-points {
     text-align: center;
     height: 20px;
    }
@@ -79,7 +79,7 @@ body {
     content: url("../images/papabear.jpg");   
     }
 
-#health-points-3 {
+#health-points {
     text-align: center;
     height: 20px;
    }
@@ -91,7 +91,7 @@ body {
     content: url("../images/humpty.jpg");
     }
 
-#health-points-4 {
+#health-points {
     text-align: center;
     height: 20px;
    }

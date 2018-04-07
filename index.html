@@ -4,13 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>starwars game, week 4</title>
-
     <link rel="stylesheet" href="assets/css/reset.css">
-    <!-- Added link to the jQuery Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="assets/javascript/javascript.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
-
 </head>
 
 <body>
@@ -22,28 +17,28 @@
         <div class="starting-images">
             <div id="character-images-top">
 
-                <div class="character">
+                <div class="character" data-health-points="120" data-attack-power="10">
                     <p class="img-top-words">Bear</p>
                     <div id="character-1"></div>
-                    <p id="health-points-1" data-value="120">120</p>
+                    <p id="health-points"  >HP 120</p>
                 </div>
 
-                <div class="character">
+                <div class="character" data-health-points="180" data-attack-power="8">
                     <p class="img-top-words">Goldie</p>
                     <img id="character-2">
-                    <p id="health-points-2" data-value="180">180</p>
+                    <p id="health-points"  >HP 180</p>
                 </div>
 
-                <div class="character">
+                <div class="character" data-health-points="150" data-attack-power="12">
                     <p class="img-top-words">PapaBear</p>
                     <img id="character-3">
-                    <p id="health-points-3" data-value="150">150</p>
+                    <p id="health-points"  >HP 150</p>
                 </div>
 
-                <div class="character">
+                <div class="character" data-health-points="180" data-attack-power="9">
                     <p class="img-top-words">Humpty</p>
                     <img id="character-4">
-                    <p id="health-points-4" data-value="180">180</p>
+                    <p id="health-points"  >HP 180</p>
                 </div>
 
 
@@ -53,9 +48,7 @@
         <p id="p-1"> Your Character </p>
 
         <div class="enemies">
-            <div id="enemies-to-choose-from">
-                <!-- maybe append a div here to put the character images from the "starting-images" class above -->
-            </div>
+            <div id="enemies-to-choose-from"></div>
         </div>
 
         <div class="p-info">
@@ -75,8 +68,14 @@
     </div>
 
 
+    
+    
+    
+
 
 
 </body>
-
+<!-- Added link to the jQuery Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="assets/javascript/javascript.js"></script>
 </html>
