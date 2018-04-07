@@ -57,27 +57,30 @@ reset();  // why does this run before the html/css?
     // **** Need to make this into a function to call with each enemy, 
     //      but this is still confusing to me  ***
 
-        $("button").on("click", function() {
+        $("button").on("click", function(event) {
+            
             if(stage === "attack") {
+
+                event.stopPropagation();
             // get HP data from the user's selection
-            var userHP = $(".starting-images .character").attr("data-health-points");
+                userHP = $(".starting-images .character").attr("data-health-points");
                 userHP = parseInt(userHP);
                 console.log("User's HP = " + userHP);
 
             // get attackpower from users selection
-            var attackPowerUser = $(".starting-images .character").attr("data-attack-power");
+             attackPowerUser = $(".starting-images .character").attr("data-attack-power");
                 attackPowerUser = parseInt(attackPowerUser);
                 console.log("User's attack power =  " + attackPowerUser);
             // get HP data from the enemy
 
             var enemyHP = $(".enemy .character").attr("data-health-points");
                 enemyHP = parseInt(enemyHP);
-                console.log("Enemy's HP  " + userHP);
+                console.log("Enemy's HP  " + enemyHP);
             // get attackpower from enemy
 
             var attackPowerEnemy = $(".enemy .character").attr("data-attack-power");
                 attackPowerEnemy = parseInt(attackPowerEnemy);
-                console.log("Enemy's attack power  " + userHP);
+                console.log("Enemy's attack power  " + attackPowerEnemy);
             
             // reduces the enemys HP
             enemyHP = (enemyHP - attackPowerUser);
@@ -118,7 +121,7 @@ reset();  // why does this run before the html/css?
             
 
 
-// This is the attack function from above
+// This is the attack function from above stage 2
 
             $("button").on("click", function() {
                 if(stage === "2ndEnemyAttack");
@@ -181,10 +184,10 @@ reset();  // why does this run before the html/css?
             }
         });
             
-          // This is the attack function from above
+          // This is the attack function from above 3rd 
 
             $("button").on("click", function() {
-                if(stage === "3rdEnemyAttack");
+                if(stage === "3rdEnemyAttack") {
                 // get HP data from the user's selection
     
                 // get HP data from the enemy
@@ -220,6 +223,7 @@ reset();  // why does this run before the html/css?
                         $("#enemy-to-battle").empty();
                         
                     }
+                }
             // closes attack function
             })
         // closes 3rdstage attack
