@@ -1,14 +1,11 @@
 
 var stage = "start";
 
-var attackPowerUser; // should these be global
-var userHP;// should these be global
+var attackPowerUser; // global to keep the users info ongoing
+var userHP;// global to keep the users info ongoing
 
 //var attackPowerEnemy;// should these be global
 //var enemyHP;// should these be global
-
-
-
 
 
 $(document).ready(function(){
@@ -61,7 +58,7 @@ reset();  // why does this run before the html/css?
     //      but this is still confusing to me  ***
 
         $("button").on("click", function() {
-            if(stage === "attack");
+            if(stage === "attack") {
             // get HP data from the user's selection
             var userHP = $(".starting-images .character").attr("data-health-points");
                 userHP = parseInt(userHP);
@@ -105,6 +102,7 @@ reset();  // why does this run before the html/css?
                     $("#enemy-to-battle").empty();
                     stage = "2ndEnemy";
                 }
+            }
         });
 
 // 2ndEnemy stage Function
@@ -112,11 +110,15 @@ reset();  // why does this run before the html/css?
         // want to create a new stage var here called "2ndEnemy" that will operate
         // once the first enemy is defeated. it will allow the user to select another enemy
         $("#enemies-to-choose-from").on("click", ".character", function() {
-            if (stage === "2ndEnemy")
+            if (stage === "2ndEnemy") {
             $(this).detach().appendTo("#enemy-to-battle");
             stage = "2ndEnemyAttack";
+            }
+        });
             
-          // This is the attack function from above
+
+
+// This is the attack function from above
 
             $("button").on("click", function() {
                 if(stage === "2ndEnemyAttack");
@@ -164,17 +166,20 @@ reset();  // why does this run before the html/css?
                 $("#enemy-to-battle").empty();
                  stage = "3rdEnemy";
                 }
-            })
-        });
+            });
+        
+        
            
 // 3rdEnemy stage Function
 
         // want to create a new stage var here called "2ndEnemy" that will operate
         // once the first enemy is defeated. it will allow the user to select another enemy
         $("#enemies-to-choose-from").on("click", ".character", function() {
-            if (stage === "3rdEnemy")
+            if (stage === "3rdEnemy") {
             $(this).detach().appendTo("#enemy-to-battle");
             stage = "3rdEnemyAttack";
+            }
+        });
             
           // This is the attack function from above
 
@@ -183,21 +188,33 @@ reset();  // why does this run before the html/css?
                 // get HP data from the user's selection
     
                 // get HP data from the enemy
-    
-                // reduces the enemys HP
-                enemyHP -= attackPowerUser;
-                $("health-points-1").text(enemyHP);
-                // reduces the users HP
-                userHP -= attackPowerEnemy;
-                $("health-points-2").text(userHP);
-                // increase the user attack poweer
-                attackPowerUser += attackPowerUser;
-    
-                    // if statements to determine where to go next
-                    if (userHP <= 0) {
-                        alert("You Lost....");
-                      //  reset();
-                    } 
+                var enemyHP = $(".enemy .character").attr("data-health-points");
+                enemyHP = parseInt(enemyHP);
+                console.log("Enemy's HP  " + userHP);
+            // get attackpower from enemy
+
+            var attackPowerEnemy = $(".enemy .character").attr("data-attack-power");
+                attackPowerEnemy = parseInt(attackPowerEnemy);
+                console.log("Enemy's attack power  " + userHP);
+            
+            // reduces the enemys HP
+            enemyHP = (enemyHP - attackPowerUser);
+            $(".enemy #health-points").text(enemyHP);
+                console.log("this is the enemies new hp = " + enemyHP);
+            // reduces the users HP
+            userHP = (userHP - attackPowerEnemy)
+            $(".starting-images #health-points").text(userHP);
+                console.log("this is the user's new hp = " + userHP);
+                console.log("users before attack power = " + attackPowerUser);
+            // increase the user attack poweer
+            attackPowerUser = (attackPowerUser + attackPowerUser);
+                console.log("This is the users attack power = " + attackPowerUser);
+
+                // if statements to determine where to go next
+                if (userHP <= 0) {
+                    alert("You Lost....");
+                     reset();
+                } 
                     if (enemyHP <= 0) {
                         alert("You Won the Game");
                         $("#enemy-to-battle").empty();
@@ -206,9 +223,9 @@ reset();  // why does this run before the html/css?
             // closes attack function
             })
         // closes 3rdstage attack
-        })
+        });
         // closes document.ready
-    });
+    
 
 
 
