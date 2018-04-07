@@ -61,7 +61,7 @@ reset();  // why does this run before the html/css?
             
             if(stage === "attack") {
 
-                event.stopPropagation();
+            event.stopImmediatePropagation();
             // get HP data from the user's selection
                 userHP = $(".starting-images .character").attr("data-health-points");
                 userHP = parseInt(userHP);
@@ -124,8 +124,8 @@ reset();  // why does this run before the html/css?
 // This is the attack function from above stage 2
 
             $("button").on("click", function() {
-                if(stage === "2ndEnemyAttack");
-
+                if(stage === "2ndEnemyAttack") {
+                    event.stopImmediatePropagation();
                // get HP data from the user's selection
  //           userHP = $(".starting-images .character").attr("data-health-points");
  //           userHP = parseInt(userHP);
@@ -169,6 +169,7 @@ reset();  // why does this run before the html/css?
                 $("#enemy-to-battle").empty();
                  stage = "3rdEnemy";
                 }
+            }
             });
         
         
@@ -188,6 +189,7 @@ reset();  // why does this run before the html/css?
 
             $("button").on("click", function() {
                 if(stage === "3rdEnemyAttack") {
+                event.stopImmediatePropagation();
                 // get HP data from the user's selection
     
                 // get HP data from the enemy
