@@ -18,10 +18,18 @@ var enemyArray = [
 reset function () {}
 
 
+    Set stages variable to control when event occur
+    - stage = start (select the users character)
+    
+    
+    - stage = enemy (select the enemy from list, after stage start is complete)
+
+    - stage = attack (begin the attack function, after stage enemy is complete)
 
 
 
 Attack function
+    Stage = attack
 
     .on click to start function {
 
@@ -50,3 +58,8 @@ Attack function
 
 
              nextEnemy()
+
+
+
+    
+
