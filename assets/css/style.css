@@ -1,16 +1,10 @@
 
 
-
-/*
-use appendto to move a div to another locatoin
-*/
-
 * {
     box-sizing: border-box;
     }
 
 body {
-    
     background-image: url("background.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -27,12 +21,10 @@ body {
     font-size: 28px;
     }
 
-
 #character-images-top {
     margin: 10px 0 0px 10px;
     height: 170px;   
     }
-
 
 .character {
     height: 160px;
@@ -109,11 +101,8 @@ body {
 #enemies-to-choose-from {
     float: left;
     margin: 5px 0 10px 20px;
-    border: 1px solid black; /* this can be removed */
-    
     height: 160px;
     width: 100%;
-
     }
 
 #p-2, #p-3 {
@@ -141,9 +130,6 @@ body {
 #enemy-to-battle {
     float: left;
     margin: 5px 0 0px 20px;
-    border: 1px solid black; /* this can be removed */
-    
     height: 160px;
     width: 100%;
-
     }
